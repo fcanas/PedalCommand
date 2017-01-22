@@ -1,5 +1,5 @@
-#N canvas 10 24 358 382 10;
-#X obj 187 341 dac~;
+#N canvas 18 24 356 415 10;
+#X obj 187 379 dac~;
 #X msg 187 63 open ./Media/0.aiff;
 #X msg 187 88 open ./Media/1.aiff;
 #X msg 187 113 open ./Media/2.aiff;
@@ -13,6 +13,10 @@
 #X obj 187 313 Player;
 #X obj 28 15 PedalMux;
 #X obj 28 44 select 1 2 3 4 5 6 7 8 9 10;
+#X obj 61 148 / 127;
+#X obj 187 343 *~;
+#X floatatom 116 315 5 0 0 0 - - -, f 5;
+#X obj 214 344 *~;
 #X connect 1 0 11 0;
 #X connect 2 0 11 0;
 #X connect 3 0 11 0;
@@ -23,9 +27,10 @@
 #X connect 8 0 11 0;
 #X connect 9 0 11 0;
 #X connect 10 0 11 0;
-#X connect 11 0 0 0;
-#X connect 11 1 0 1;
+#X connect 11 0 15 0;
+#X connect 11 1 17 0;
 #X connect 12 0 13 0;
+#X connect 12 1 14 0;
 #X connect 13 0 1 0;
 #X connect 13 1 2 0;
 #X connect 13 2 3 0;
@@ -36,3 +41,8 @@
 #X connect 13 7 8 0;
 #X connect 13 8 9 0;
 #X connect 13 9 10 0;
+#X connect 14 0 16 0;
+#X connect 15 0 0 0;
+#X connect 16 0 15 1;
+#X connect 16 0 17 1;
+#X connect 17 0 0 1;
