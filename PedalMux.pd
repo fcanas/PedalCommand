@@ -1,4 +1,4 @@
-#N canvas 2 101 785 362 10;
+#N canvas 468 28 785 400 10;
 #X msg 80 201 1;
 #X msg 118 201 2;
 #X msg 154 201 3;
@@ -12,7 +12,7 @@
 #X obj 193 15 pgmin;
 #X obj 118 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 193 51 mod 10;
+#X obj 193 53 mod 10;
 #X obj 193 91 select 1 2 3 4 5 6 7 8 9 0;
 #X obj 154 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -35,7 +35,7 @@
 #X obj 80 15 notein;
 #X floatatom 80 53 5 0 0 0 - - -, f 5;
 #X obj 80 88 select 100 123;
-#X floatatom 248 52 5 0 0 0 - - -, f 5;
+#X floatatom 248 53 5 0 0 0 - - -, f 5;
 #X obj 464 15 ctlin;
 #X obj 464 88 pack;
 #X floatatom 464 53 5 0 0 0 - - -, f 5;
@@ -44,13 +44,16 @@
 #X obj 464 126 route 42 1 27;
 #X obj 464 164 unpack 0 0;
 #X floatatom 464 202 5 0 0 0 - - -, f 5;
-#X obj 593 165 unpack 0 0;
+#X obj 539 165 unpack 0 0;
 #X obj 527 272 nbx 5 60 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 45
 -99865 -262144 -203904 0 256;
 #X obj 59 272 nbx 5 60 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 45
 -99865 -262144 -203904 0 256;
 #X obj 293 272 nbx 5 60 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 45
 -99865 -262144 -203904 0 256;
+#X obj 293 353 outlet;
+#X obj 527 353 outlet;
+#X obj 59 353 outlet;
 #X connect 0 0 37 0;
 #X connect 1 0 37 0;
 #X connect 2 0 37 0;
@@ -101,3 +104,6 @@
 #X connect 33 0 34 0;
 #X connect 34 0 38 0;
 #X connect 35 1 36 0;
+#X connect 36 0 40 0;
+#X connect 37 0 41 0;
+#X connect 38 0 39 0;
