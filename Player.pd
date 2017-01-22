@@ -1,0 +1,20 @@
+#N canvas 553 23 176 209 10;
+#X msg 100 103 stop;
+#X obj 21 140 readsf~ 2;
+#X obj 21 169 outlet~;
+#X obj 100 18 inlet;
+#X obj 74 169 outlet~;
+#X obj 21 19 inlet s;
+#X obj 38 48 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 38 74 delay 500;
+#X msg 38 103 start;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 4 0;
+#X connect 3 0 0 0;
+#X connect 5 0 6 0;
+#X connect 5 0 1 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 1 0;
