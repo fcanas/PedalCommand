@@ -1,4 +1,4 @@
-#N canvas 18 24 356 415 10;
+#N canvas 8 107 356 359 10;
 #X obj 187 379 dac~;
 #X msg 187 63 open ./Media/0.aiff;
 #X msg 187 88 open ./Media/1.aiff;
@@ -17,6 +17,7 @@
 #X obj 187 343 *~;
 #X floatatom 116 315 5 0 0 0 - - -, f 5;
 #X obj 214 344 *~;
+#X msg 257 15 \; pd dsp 1;
 #X connect 1 0 11 0;
 #X connect 2 0 11 0;
 #X connect 3 0 11 0;
